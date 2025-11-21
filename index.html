@@ -1,0 +1,109 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Barritts Website</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAVIGATION BAR -->
+  <div class="navbar">
+
+    <div class="dropdown">
+      <a href="#home">Home</a>
+      <div class="dropdown-content">
+        <a href="#personal-summary">Personal Summary</a>
+        <a href="#website-orientation">Website Orientation</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <a href="#resume">Resume</a>
+      <div class="dropdown-content">
+        <a href="#resume-pdf">PDF Embedded</a>
+        <a href="#resume-download">Download Link</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <a href="#projects">Projects</a>
+      <div class="dropdown-content">
+        <a href="#projects-list">See List</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <a href="#research">Research</a>
+      <div class="dropdown-content">
+        <a href="#rw">RW</a>
+        <a href="#next-sem">Next Sem</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <a href="#organizations">Organizations</a>
+      <div class="dropdown-content">
+        <a href="#gnc">GNC</a>
+        <a href="#aiaa">AIAA</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- PAGE CONTENT -->
+  <div class="page" id="home">
+    <h1>Home</h1>
+    <p>Welcome to the site.</p>
+  </div>
+
+  <div class="page" id="personal-summary">
+    <h2>Personal Summary</h2>
+    <p>Write your summary here.</p>
+  </div>
+
+  <div class="page" id="website-orientation">
+    <h2>Website Orientation</h2>
+    <p>Explain the structure here.</p>
+  </div>
+
+  <div class="page" id="resume-pdf">
+    <h2>Resume (Embedded)</h2>
+    <iframe src="resume.pdf" width="100%" height="600px"></iframe>
+  </div>
+
+  <div class="page" id="resume-download">
+    <h2>Resume Download</h2>
+    <a href="resume.pdf" download>Download Resume PDF</a>
+  </div>
+
+  <div class="page" id="projects-list">
+    <h2>Projects List</h2>
+    <p>Add project descriptions here.</p>
+  </div>
+
+  <div class="page" id="rw">
+    <h2>Research - RW</h2>
+    <p>Current research writing notes.</p>
+  </div>
+
+  <div class="page" id="next-sem">
+    <h2>Research - Next Semester</h2>
+    <p>Planned research for next semester.</p>
+  </div>
+
+  <div class="page" id="gnc">
+    <h2>GNC Organization</h2>
+    <p>Details about involvement in GNC.</p>
+  </div>
+
+  <div class="page" id="aiaa">
+    <h2>AIAA Organization</h2>
+    <p>Details about involvement in AIAA.</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
