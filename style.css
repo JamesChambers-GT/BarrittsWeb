@@ -3,6 +3,8 @@ body {
   font-family: Arial, sans-serif;
   background: rgb(40,40,40);
   color: white;
+  padding-top: 70px;
+
 }
 
 /* Make ALL links white */
@@ -16,10 +18,15 @@ a:hover {
 
 .navbar {
   display: flex;
-  background: #000;
+  background: rgb(20,20,20);
   padding: 0 20px;
   align-items: center;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.6);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 .navbar a {
