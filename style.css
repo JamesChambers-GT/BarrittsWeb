@@ -16,6 +16,24 @@ a:hover {
   opacity: 0.8;
 }
 
+.image-block {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.image-block img {
+    width: 80%;  /* or 100% if you prefer full width */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.image-block figcaption {
+    margin-top: 8px;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: white;
+}
+
 .navbar {
   display: flex;
   background: rgb(48,48,48);
