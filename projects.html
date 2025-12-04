@@ -23,25 +23,56 @@
   <h3>July 2025</h3>
   <p>Over the summer, I had the idea to do my first of several aerospace-related personal projects, all of which are outlined on this page. For my initial project, I chose to create and analyze a solid rocket motor, from the fuel composition to the grain geometry and testing. In preparation for this project, my girlfriend did ask me to take steps to ensure my safety, so I created a presentation to outline the fuel creation process and safety measures, which is linked below:
 </p>
-prez
+
+  <iframe src="prez.pdf" width="100%" height="350px" style="border:none;"></iframe></iframe>
+
   <p>As one can see, my first step was to create a simple rocket fuel, known as rocket candy or R-Candy. All rocket fuels consist primarily of oxidizers and fuel components, in addition to small amounts of additives. R-Candy uses potassium nitrate (KNO3) as oxidizer and powdered sugar as fuel. The typical, most basic recipe for this fuel consists of 60% potassium nitrate and 40% sugar. The two ingredients are first (separately) blended, then mixed together well as powdered. Then, the mixture is heated until the sugar is melted, and the slurry is cast into the motor. The cooked mixture does have the appearance and smell of caramel, thus giving the fuel its name. 
 </p>
   <p>Initial tests were exciting, and I was determined to improve the fuel and make it more useful. As the result of much testing, I determined a few additives to improve the burn of the fuel. One of these is iron oxide powder (rust). This acts as a catalyst to the reaction, since the rust particles are effective at transferring heat around the motor, and it lowers the activation energy of the decomposition process, both of which increase the burn rate. This is optimal for rocket design since a faster reaction increases both chamber pressure and exit velocity, increasing thrust. An additional additive used was corn syrup, to increase viscosity, and make casting easier.
 </p>
-ingredients
+
+  <figure class="image-block">
+      <img src="team.jpg" alt="Research Team">
+      <figcaption><b>All ingredients prepared, ready for processing (grinding, mixing and heating).</b></figcaption>
+  </figure>
+
   <p>	With my recipe fully ready, I now moved to thinking of grain geometry. To achieve a balance of ease of manufacturing and good burn profile, I chose a BATES, or toroidal pattern. To create the new version of my motor casing, I first cut a 30mm-diameter aluminum pipe into a 150mm height section. After pouring the cooked fuel into the tube, a lubricated rod can be inserted, creating the inner cavity in the motor. This cavity allows the motor to produce much more thrust in the beginning of the burn than otherwise.
 </p>
-grained motor
+
+  <figure class="image-block">
+      <img src="team.jpg" alt="Research Team">
+      <figcaption><b>Prepared motor with central cavity.</b></figcaption>
+  </figure>
+
   <p>	Now, I proceeded to create a test stand to measure and plot the thrust. I modelled a stand with Solidworks, then created an assembly with load cells and a few other helper parts. The load cells would then be attached to amplifier modules and connected to an Arduino Uno, which would record the data for analysis.
 </p>
-test cad
+
+  <figure class="image-block">
+      <img src="team.jpg" alt="Research Team">
+      <figcaption><b>The test stand assembly CAD, done in Solidworks.</b></figcaption>
+  </figure>
+
   <p>	Since the aluminum tube containing the fuel reached extreme temperatures, I added wood segments as insulators around the upper ring and base plate. The complete testing setup, along with an action shot are shown below:
 </p>
-testing
-action
+
+<figure class="image-block">
+    <img src="team.jpg" alt="Research Team">
+    <figcaption><b>The complete testing setup: Motor > Load Cells > Amplifier > Arduino > Computer</b></figcaption>
+</figure>
+
+<figure class="image-block">
+    <img src="team.jpg" alt="Research Team">
+    <figcaption><b>The motor test in progress!</b></figcaption>
+</figure>
+
   <p>	The given specific impulse of R-candy is about 120 seconds. With a mass close to 250 grams, I should obtain a total impulse of 120s * .25kg * 9.81 m/s^2 = 294.3 Ns. To calculate my total impulse, I had to integrate the load cell’s data through the burn time. I subtracted the weight of the motor casing for all times, then subtracted propellant weight, assuming the propellant was burned linearly throughout the burn (-250g at t = 0, -0g at end of burn). After this, I can approximate the integral of the thrust curve using the trapezoidal rule. After this, I found a total impulse of xxx, corresponding to a specific impulse of xxx. As such, the percent difference is xxx. 
 </p>
-thrust
+
+  <figure class="image-block">
+      <img src="team.jpg" alt="Research Team">
+      <figcaption><b>The thrust curve for my motor, with the fuel and casing wieghts subtracted.</b></figcaption>
+  </figure>
+
   <p>	This project was a very exciting journey for me. I learned a lot about the testing of aerospace systems, along with lessons on optimizing propellant and characterizing thrust. The most important lesson I learned, however, was the importance of a top-down approach when starting a project. Since this was my first project of this type, I started with something I thought was interesting and only later thought of how to obtain academic value or knowledge from it. This led to delays, wasted time/trials, and unnecessary costs. Going forward, I now know the importance of a proper plan and timeline before I begin any physical purchasing or building in a project. 
 </p>
   <p>	Going forward, I do want to expand on this project. I would love to create a full model rocket around this motor and fuel data. I would create a nozzle for this motor out of graphite or heat-resistant clay. As for what I would have changed during this project, I would have created a horizontal test stand so that I would not have had to subtract casing/motor weights. I also would have purchased a phenolic tube to make insulation less of an issue. 
