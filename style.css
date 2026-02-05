@@ -10,7 +10,7 @@ body {
 /* Make ALL links white */
 a {
   color: white;
-  text-decoration: none;
+  text-decoration: underline;
 }
 a:hover {
   opacity: 0.8;
