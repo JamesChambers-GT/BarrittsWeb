@@ -14,10 +14,59 @@
   <a href="organizations.html">Organizations</a>
 </div>
 <div class="page"><h1>Projects</h1>
-  <h2>Computer Vision Tracker</h2>
+  <h2>Gimballed Computer Vision Tracker</h2>
   <h3>September 2025</h3>
-  <p>Coming Soon</p>
+  <p>	After arriving at Georgia Tech for my junior year, I wanted to gain experience in robotics and integrated systems. As such, I bought an arduino kit and broke out my old Raspberry Pi, and started working my way through some online tutorials. As I developed my skills, getting comfortable working with servos and writing low-level C++ and Python code, I decided to take on a larger project, leading me on my journey detailed below.
+</p>
+  <p>	I knew that I wanted to build a device that would test and improve my knowledge of both mechanical and software engineering, so some sort of robot was a clear choice. I was (and still am) also interested in computer vision, particularly in how satellites can use their cameras to relay information for use on Earth. These two ideas together led me to create a relatively simple (compared to satellite technology) computer vision robot that could track and follow a green ball, rotating in the pitch and yaw axes via servos.
+</p>
+  <p>	The first step in this project was creating an assembly of the system in Solidworks, so that I could not only visualize the project, but also print the needed parts on my printer. My initial designs were optimized to minimize the time to print and use minimal PLA. This paradigm, along with the practice of making pieces one at a time and not synthesizing them into one singular assembly, led to a disappointing final structure that was unstable and could not stand on its own.
+</p>
+  <p>	For my second round of CAD designing, I was equipped with more knowledge of gimbal design, as well as far more Solidworks experience in general. As such, I knew that I could save time and cost overall by taking extra care in the beginning of the process and creating quality parts, and making sure they fit together properly before any manufacturing began. Additionally, with a high-quality model of the servo itself, designing components to properly interface would be easier. The cumulation of my design was the project’s structural assembly shown below. It consists of a base, three servos and their horns, three unique servo holders, a camera mount and cap, and two connecting pieces. 
+</p>
 
+  <figure class="image-block">
+      <img src="Tracker Media/BTassembly.png" alt="Assembly">
+      <figcaption><b>The assembly in Solidworks, with screws omitted for better visibility.</b></figcaption>
+  </figure>  
+
+  <p>Once all pieces were printed, now the build could be assembled. All servos were attached to their respective holders, and the device at large was built from the base upwards. Unfortunately, there was a gap between the left connector and the upper servo holder, likely due to printing errors. Thankfully, the gap was secured by the necessary screws and did not present a stability issue. 
+</p>
+
+  <figure class="image-block">
+      <img src="Tracker Media/structure.jpeg" alt="Structure">
+      <figcaption><b>The build constructed, prior to wiring.</b></figcaption>
+  </figure>  
+
+  <p>	After constructing the device, I had to wire the servos and install the camera. The base and upside-down camera mount were intentionally designed to properly integrate my Raspberry Pi with minimal wire twist. Each of the servos’ control wires were connected to a GPIO pin, and the servos were powered with an auxiliary Arduino acting as a 5V power supply, as the Raspberry Pi could not support the camera module and all three servos. Once all grounds were linked, I could start developing software beyond initial testing files.
+</p>
+
+  <figure class="image-block">
+      <img src="Tracker Media/wired.jpeg" alt="Wired Structure">
+      <figcaption><b>The completed build, ready for final software development.</b></figcaption>
+  </figure>  
+
+  <p>	The code for this project was completed in Python, taking particular advantage of the pigpio, openCV, and picamera2 modules. Aside from unit tests of the individual components, the code consisted of three files: camera functionality, servo control, and the master file utilizing methods from both. 
+</p>
+  <p>The camera controller takes the output of the camera, transitions it through several filters to improve contrast, then masks the image to only show pixels of the intended color. A box is then drawn around the predicted position of the ball, which informs the position of it on the screen. The servo controller simply compartmentalizes methods for moving the pitch and yaw angles of the camera, so that the device can follow its target over a larger field of view. The final file acts as the controller, using the position of the ball on the screen to find an error, and move the servos in such a way as to minimize the error.
+</p>
+
+  <figure class="image-block">
+      <img src="Tracker Media/feedback.png" alt="Feedback Loop">
+      <figcaption><b>A feedback control diagram of the device, summarizing all subsystems.</b></figcaption>
+  </figure>
+
+  <video width="640" height="480" controls>
+    <source src="Tracker Media/IMG_7157.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+  <p>	I am very happy with how this project turned out. The process of transforming an idea to a 3D model to a physical, working device is extremely satisfying to me. This was also the first robot that I have made, and I am excited to explore the field further for future projects. The knowledge in the fields of CAD, computer vision, and mechanical engineering that I have gained will surely aid me in future professional, academic, and personal goals. This project could easily be modified to pertain to several aerospace applications, such as a rocket or drone tracker, or a targeting system on an orbiting drone.
+</p>
+  <p>	I have a number of goals and ways to improve this project in the future. Firstly, the current controller uses only proportional control, which causes some unwanted oscillations when the position of the ball changes quickly. Added integral and derivative terms would smooth out these oscillations, and give me more experience with a more modern form of control that is very applicable to parts of the aerospace industry, such as GNC. Secondly, I would like to redesign some of the parts such that the build is cleaner, and cuts down on some of the unnecessary fasteners. Finally, I believe that I could extend the functionality of this device to predicting the position of the ball at future points, applying kinematic equations to the observed motion. This may involve significant software difficulties, and possibly another camera to define the ball’s position in 3D space, but it would be a fun challenge that would test my knowledge of optics and 3-dimensional motion.
+</p>
+
+
+<!----------------------------------------------------->
 
   <h2>Solid Rocket Motor</h2>
   <h3>July 2025</h3>
