@@ -34,6 +34,14 @@ a:hover {
     color: white;
 }
 
+.video-player {
+  display: block;          /* allows margin auto */
+  width: 100%;             /* full container width */
+  max-width: 100%;         /* prevents overflow */
+  height: auto;            /* preserves aspect ratio */
+  margin: 0 auto;          /* centers horizontally */
+}
+
 .navbar {
   display: flex;
   background: rgb(48,48,48);
